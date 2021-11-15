@@ -15,7 +15,7 @@ const getLineHeight = (heading: string) => {
 };
 
 const Heading: React.FC<HeadingProps> = ({ as = 'h2', ...rest }) => {
-  return <Text as={as} fontWeight='700' {...getLineHeight(as)} {...rest} />;
+  return <Text as={as} fontWeight='bold' {...getLineHeight(as)} {...rest} />;
 };
 
 export default Heading;

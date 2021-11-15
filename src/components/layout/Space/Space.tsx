@@ -22,7 +22,7 @@ const getSpaceSize = (spaceSize: SpaceSize) => {
   return typeof spaceSize === 'string' ? sizes[spaceSize] : spaceSize || 1;
 };
 
-interface Test {
+interface BreakPoints {
   sm: string;
   xs: string;
   lg: string;
@@ -45,7 +45,7 @@ const Space: React.FC<SpaceProps> = ({
 
   const direction =
     typeof flexDirection === 'object' && breakpoint
-      ? flexDirection[breakpoint as keyof Test]
+      ? flexDirection[breakpoint as keyof BreakPoints]
       : flexDirection;
 
   return (
